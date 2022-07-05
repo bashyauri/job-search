@@ -58,10 +58,10 @@ export default {
     ...mapState(["jobs"]),
   },
   async mounted() {
-    this.FETCHED_JOBS;
+    this.FETCHED_JOBS();
   },
   methods: {
-    ...mapActions(FETCHED_JOBS),
+    ...mapActions([FETCHED_JOBS]),
   },
 };
 </script>
