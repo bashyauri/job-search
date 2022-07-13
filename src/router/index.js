@@ -6,6 +6,8 @@ const Home = () => import("@/views/Home.vue");
 const JobResultsView = () =>
   import(/* webPackChunkName: "jobs" */ "@/views/JobResultsView");
 const JobView = () => import(/* webPackChunkName: "jobs" */ "@/views/JobView");
+const TeamsView = () =>
+  import(/* webPackChunkName: "teams" */ "@/views/TeamsView");
 const routes = [
   {
     path: "/",
@@ -21,6 +23,11 @@ const routes = [
     path: "/jobs/results/:id",
     name: "JobListing",
     component: JobView,
+  },
+  {
+    path: "/teams",
+    name: "Teams",
+    component: TeamsView,
   },
 ];
 const router = createRouter({
